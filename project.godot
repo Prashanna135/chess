@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="chess proj"
+run/main_scene="uid://4qjf3irw75er"
+config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/image="uid://6i6k1vbe5uyi"
+config/icon="uid://6i6k1vbe5uyi"
+
+[autoload]
+
+GameSettings="*uid://bdloi6ua2uwy"
+NetworkManager="*uid://btvhhcq1v0txf"
+ProfileManager="*uid://dhpxrkuondmvq"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+
+[gui]
+
+theme/custom="res://main_menu_theme.tres"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true

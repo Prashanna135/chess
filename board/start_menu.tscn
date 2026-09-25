@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://4qjf3irw75er"]
+
+[ext_resource type="Script" uid="uid://bkkwn2qahg0p0" path="res://board/start_menu.gd" id="1_script"]
+
+[node name="StartMenu" type="Control" unique_id=1433119817]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1768809273]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.055, 0.062, 0.09, 1)
+
+[node name="TopGlow" type="ColorRect" parent="Background" unique_id=2800145001]
+anchors_preset = 0
+anchor_right = 1.0
+offset_right = 0.0
+offset_bottom = 310.0
+color = Color(0.35, 0.27, 0.14, 0.16)
+mouse_filter = 2
+
+[node name="BoardPattern" type="Control" parent="Background" unique_id=2800145002]
+anchors_preset = 10
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = -190.0
+offset_right = 0.0
+offset_bottom = 0.0
+mouse_filter = 2
+
+[node name="DecorLeft" type="TextureRect" parent="Background" unique_id=1846547926]
+anchors_preset = 9
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -250.0
+offset_right = 100.0
+offset_bottom = 310.0
+stretch_mode = 4
+modulate = Color(1, 1, 1, 0.1)
+mouse_filter = 2
+
+[node name="DecorRight" type="TextureRect" parent="Background" unique_id=1944883451]
+anchors_preset = 9
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -250.0
+offset_right = 230.0
+offset_bottom = 310.0
+stretch_mode = 4
+modulate = Color(1, 1, 1, 0.1)
+mouse_filter = 2
+
+[node name="Vignette" type="ColorRect" parent="Background" unique_id=2021739484]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.36)
+mouse_filter = 2
+
+[node name="MenuPanel" type="PanelContainer" parent="Background" unique_id=1052643068]
+custom_minimum_size = Vector2(620, 1010)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -505.0
+offset_right = 310.0
+offset_bottom = 505.0
+theme_type_variation = "MenuPanel"
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainContainer" type="VBoxContainer" parent="Background/MenuPanel" unique_id=1052643067]
+layout_mode = 2
+theme_override_constants/separation = 20
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderSection" type="VBoxContainer" parent="Background/MenuPanel/MainContainer" unique_id=2900000001]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TitleLabel" type="Label" parent="Background/MenuPanel/MainContainer/HeaderSection" unique_id=2164947905]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(500, 58)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "CHESS ATM"
+theme_override_font_sizes/font_size = 54
+theme_override_colors/font_color = Color(0.97, 0.83, 0.53, 1)
+
+[node name="SubtitleLabel" type="Label" parent="Background/MenuPanel/MainContainer/HeaderSection" unique_id=2262085239]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(500, 28)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Make your next move"
+theme_override_font_sizes/font_size = 19
+theme_override_colors/font_color = Color(0.68, 0.7, 0.78, 1)
+
+[node name="ModeSection" type="VBoxContainer" parent="Background/MenuPanel/MainContainer" unique_id=2900000002]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ModeLabel" type="Label" parent="Background/MenuPanel/MainContainer/ModeSection" unique_id=2361764090]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(500, 22)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "GAME MODE"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.55, 0.59, 0.69, 1)
+
+[node name="ModeContainer" type="HBoxContainer" parent="Background/MenuPanel/MainContainer/ModeSection" unique_id=1418495295]
+custom_minimum_size = Vector2(500, 112)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+
+[node name="VsBotButton" type="Button" parent="Background/MenuPanel/MainContainer/ModeSection/ModeContainer" unique_id=1562667621]
+custom_minimum_size = Vector2(244, 112)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = "MenuCard"
+text = "VS BOT
+Challenge the computer"
+
+[node name="VsPersonButton" type="Button" parent="Background/MenuPanel/MainContainer/ModeSection/ModeContainer" unique_id=823237229]
+custom_minimum_size = Vector2(244, 112)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = "MenuCard"
+text = "VS PLAYER
+Challenge a friend"
+
+[node name="SettingsPanel" type="PanelContainer" parent="Background/MenuPanel/MainContainer" unique_id=2900000003]
+custom_minimum_size = Vector2(500, 190)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = "SettingsPanel"
+
+[node name="SettingsGrid" type="HBoxContainer" parent="Background/MenuPanel/MainContainer/SettingsPanel" unique_id=2900000004]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 18
+
+[node name="DifficultySection" type="VBoxContainer" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid" unique_id=1534927919]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="DifficultyLabel" type="Label" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid/DifficultySection" unique_id=1609103222]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(220, 20)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "DIFFICULTY"
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.55, 0.59, 0.69, 1)
+
+[node name="DifficultyOption" type="OptionButton" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid/DifficultySection" unique_id=15349279190]
+custom_minimum_size = Vector2(220, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VSeparator" type="VSeparator" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid" unique_id=2900000005]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TimeSection" type="VBoxContainer" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid" unique_id=1692731018]
+custom_minimum_size = Vector2(220, 140)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 7
+
+[node name="TimeLabel" type="Label" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid/TimeSection" unique_id=1609103223]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(220, 20)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "TIME CONTROL"
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.55, 0.59, 0.69, 1)
+
+[node name="TimeOption" type="OptionButton" parent="Background/MenuPanel/MainContainer/SettingsPanel/SettingsGrid/TimeSection" unique_id=1692731019]
+custom_minimum_size = Vector2(220, 42)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="PlayOnlineButton" type="Button" parent="Background/MenuPanel/MainContainer" unique_id=988625516]
+custom_minimum_size = Vector2(500, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = "SecondaryButton"
+text = "PLAY ONLINE"
+
+[node name="SideSection" type="VBoxContainer" parent="Background/MenuPanel/MainContainer" unique_id=2900000006]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SideLabel" type="Label" parent="Background/MenuPanel/MainContainer/SideSection" unique_id=2462085240]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(500, 22)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "YOUR SIDE"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.55, 0.59, 0.69, 1)
+
+[node name="SideContainer" type="HBoxContainer" parent="Background/MenuPanel/MainContainer/SideSection" unique_id=595099009]
+custom_minimum_size = Vector2(500, 88)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+
+[node name="PlayAsWhite" type="Button" parent="Background/MenuPanel/MainContainer/SideSection/SideContainer" unique_id=1698534393]
+custom_minimum_size = Vector2(190, 88)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = "SideCard"
+text = "WHITE
+Move first"
+
+[node name="PlayAsBlack" type="Button" parent="Background/MenuPanel/MainContainer/SideSection/SideContainer" unique_id=963065674]
+custom_minimum_size = Vector2(190, 88)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = "SideCard"
+text = "BLACK
+Respond"
+
+[node name="Random" type="Button" parent="Background/MenuPanel/MainContainer/SideSection/SideContainer" unique_id=1550543126]
+custom_minimum_size = Vector2(116, 88)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = "SecondaryButton"
+text = "RANDOM"
+
+[node name="StartButton" type="Button" parent="Background/MenuPanel/MainContainer" unique_id=1225541076]
+custom_minimum_size = Vector2(500, 68)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = "PrimaryButton"
+text = "START MATCH"
+
+[node name="HintLabel" type="Label" parent="Background/MenuPanel/MainContainer" unique_id=2900000007]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(500, 22)
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "Choose your side to begin"
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.52, 0.56, 0.65, 1)

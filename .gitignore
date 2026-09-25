@@ -1,0 +1,10 @@
+.godot/
+export/
+*.apk
+*.idsig
+*.pck
+*.exe
+export_presets.cfg
+*.tmp
+*~
+.agent_scenarios/
